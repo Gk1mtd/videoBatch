@@ -16,10 +16,10 @@ function convert_video() {
     # Keep only the smaller file
     if [[ $ORIGINAL_SIZE -gt $CONVERTED_SIZE ]]; then
         if [[ $DELETE_ORIGINAL_FILES == "true" ]]; then
-            rm "$FILE"
+            gio trash "$FILE"
         fi
     else
-        rm "$OUTPUT_FILENAME"
+        gio trash "$OUTPUT_FILENAME"
     fi
 }
 
